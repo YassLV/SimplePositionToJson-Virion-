@@ -109,7 +109,6 @@ class Need implements BaseINT
      */
     public function Generate(): Void
     {
-        $json = json_encode($this->allposition);
         $jsonname = $this->jsonname;
         $jsonpos = $this->filedirectorygenerate . "/" . $jsonname . ".json";
         $addition = null;
@@ -131,13 +130,18 @@ class Need implements BaseINT
             }
             $addition = json_encode($addition);
         }
+        if(is_null($addition)){
+            $n = json_encode($this->AllPosition());
+        }else{
+            $n = $addition;
+        }
         if (file_put_contents(
                 $jsonpos,
-                is_null($addition) ? $json : $addition
+                $n
             ) == true) {
             echo "Json file successfully generated in : " . $jsonpos;
         } else {
-            throw new \Exception();
+            throw new \Exception("Error Json File not generated");
         }
     }
 
