@@ -4,13 +4,14 @@ __Enables PocketMine developers to take positions faster__
 * Simple config
 * Version 1.0
 
-## Example code
-
 ### Setup
 
 1. Add virion to your plugin
 2. Add API :
-    use MineBuilderFR\SimplePositionToJson\Base as API;
+
+		use MineBuilderFR\SimplePositionToJson\Base as API;
+    
+## Example code
 
 ### Code
    
