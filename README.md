@@ -31,7 +31,7 @@ __Enables PocketMine developers to take positions faster__
       {"x":0,"y":0,"z":0,"level":null}
     ]
 
-### API
+#### API
 
 		API->addPosition(Position $position);
 Add New Position In Json File
@@ -45,7 +45,7 @@ Set New Option File Delete
 		API->Generate() : Void;
 Generate Json File in File Directory (Finale instruction)
 
-### Quest Constant
+##### Quest Constant
 
 		const QUEST_REMOVE_FILE = 0;
   		const QUEST_ADDITION_FILE = 1;
