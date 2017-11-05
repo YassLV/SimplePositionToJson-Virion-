@@ -63,7 +63,7 @@ class Need implements BaseINT
                 "x" => $position->getX(),
                 "y" => $position->getY(),
                 "z" => $position->getZ(),
-                "level" => $position->getLevel()->getFolderName()
+                "level" => is_null($position->getLevel()) ? null : $position->getLevel()->getFolderName()
             )
         );
         return $this;
